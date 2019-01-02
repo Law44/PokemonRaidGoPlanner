@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "755337434127",
+    "firebase_url": "https://raid-go-planner.firebaseio.com",
+    "project_id": "raid-go-planner",
+    "storage_bucket": "raid-go-planner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:755337434127:android:362c998a47fbc6af",
+        "android_client_info": {
+          "package_name": "com.example.raidgoplanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "755337434127-hcfjhd64rm4sad8l4i1afk4louvkre3d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.raidgoplanner",
+            "certificate_hash": "107dba0a981e779ea494c66d2b380baec7d1b47b"
+          }
+        },
+        {
+          "client_id": "755337434127-j8fb97t402pi944falls3cqrqla7eauu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-gdx4nKf4pcoPDOMp0oHKA7uH-b5Q-aA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "755337434127-j8fb97t402pi944falls3cqrqla7eauu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
