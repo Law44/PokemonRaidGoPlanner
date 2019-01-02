@@ -72,7 +72,6 @@ public class FriendsFragment extends Fragment {
 //        recyclerView.setAdapter(RecyclerAdapter);
 
 
-
         view.findViewById(R.id.añadir).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
