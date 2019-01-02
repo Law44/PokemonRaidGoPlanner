@@ -74,6 +74,7 @@ public class PrincipalActivity extends AppCompatActivity {
 
         ring= MediaPlayer.create(PrincipalActivity.this,R.raw.pokemon);
         ring.start();
+
     }
 
     @Override

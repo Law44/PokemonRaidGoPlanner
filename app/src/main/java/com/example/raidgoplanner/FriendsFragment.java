@@ -61,15 +61,11 @@ public class FriendsFragment extends Fragment {
         });
 
         RecyclerView recyclerView = view.findViewById(R.id.friend_list);
-
-        AdaptadorFirebase adaptadorFirebase = new AdaptadorFirebase(Amigo.class, R.layout.item_friend, AmigoHolder.class, myRef.child("usuarios").child(clave).child("amigos"), application);
-
-        recyclerView.setAdapter(adaptadorFirebase);
         recyclerView.setLayoutManager(new LinearLayoutManager(application));
-//        recyclerView.setLayoutManager(new LinearLayoutManager(application));
-//
-//        RecyclerAdapter RecyclerAdapter = new RecyclerAdapter(amigosRecibida);
-//        recyclerView.setAdapter(RecyclerAdapter);
+
+        RecyclerAdapter RecyclerAdapter = new RecyclerAdapter(amigosRecibida);
+        recyclerView.setAdapter(RecyclerAdapter);
+
 
         view.findViewById(R.id.añadir).setOnClickListener(new View.OnClickListener() {
             @Override

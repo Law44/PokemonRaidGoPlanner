@@ -32,6 +32,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private FirebaseAuth mAuth;
     public GoogleApiClient mGoogleApiClient;
+    public boolean desconexion = true;
 
     @Override
     protected void onStart() {
@@ -62,13 +63,15 @@ public class SignUpActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(new ResultCallback<Status>() {
-            @Override
-            public void onResult(@NonNull Status status) {
+        if (desconexion) {
+            Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback(new ResultCallback<Status>() {
+                @Override
+                public void onResult(@NonNull Status status) {
 
-            }
-        });
-        FirebaseAuth.getInstance().signOut();
+                }
+            });
+            FirebaseAuth.getInstance().signOut();
+        }
     }
 
     @Override
@@ -112,6 +115,7 @@ public class SignUpActivity extends AppCompatActivity {
                         String key = FirebaseAuth.getInstance().getUid();
                         User newusuario = new User(nombreUsuario, equipo, user.getEmail(), lista, key);
                         mDatabase.child("users").child(key).setValue(newusuario);
+                        desconexion = false;
                         Intent intent = new Intent(SignUpActivity.this, PrincipalActivity.class);
                         startActivity(intent);
                     }
